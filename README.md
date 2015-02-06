@@ -16,7 +16,7 @@ Installation
 
 Once you've created your task list script open a linux shell add the following line to crontab (crontab -e):
 
-    * * * * * /path/to/your/task/list/script.php
+    * * * * * php /path/to/your/task/list/script.php
     
 
 Usage
