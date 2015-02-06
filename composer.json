@@ -1,0 +1,26 @@
+{
+    "name":             "pmill/php-scheduler",
+    "description":      "Simple PHP task scheduler",
+    "keywords":         ["php", "task", "scheduler", "cron"],
+    "homepage":         "https://github.com/pmill/php-scheduler",
+    "time":             "2015-02-06",
+    "license":          "MIT",
+    "authors": [
+        {
+            "name":         "pmill",
+            "email":        "dev.pmill@gmail.com",
+            "homepage":     "https://github.com/pmill",
+            "role":         "Author"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "pmill\\Scheduler": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "nesbot/Carbon": "1.13.*",
+        "mtdowling/cron-expression": "1.0.*"
+    }
+}
