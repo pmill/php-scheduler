@@ -40,10 +40,10 @@ The following example shows how to schedule a HelloDaily task (simple echo examp
     $taskList = new \pmill\Scheduler\TaskList;
     
     // Add task to run at 15:04 every day
-    $taskList->addTask((new HelloDailyTask)->setExpression(4 15 * * * *));
+    $taskList->addTask((new HelloDailyTask)->setExpression('4 15 * * * *'));
     
     // Add task to run at 15:04 every Monday
-    $taskList->addTask((new ShellMondayTask)->setExpression(4 15 * * * 1));
+    $taskList->addTask((new ShellMondayTask)->setExpression('4 15 * * * 1'));
     
     $taskList->run();
     $output = $taskList->getOutput();
