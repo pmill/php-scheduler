@@ -44,6 +44,7 @@ The following example shows how to schedule a HelloDaily task (simple echo examp
     
     // Add task to run at 15:04 every Monday
     $taskList->addTask((new ShellMondayTask)->setExpression(4 15 * * * 1));
+    
     $taskList->run();
     $output = $taskList->getOutput();
 
