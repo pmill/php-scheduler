@@ -32,7 +32,7 @@ The following example shows how to schedule a HelloDaily task (simple echo examp
         }
     }
     
-    class HelloDailyTask extends \pmill\Scheduler\Task\Shell
+    class ShellMondayTask extends \pmill\Scheduler\Task\Shell
     {
         protected $command = "echo Hello Monday";
     }
