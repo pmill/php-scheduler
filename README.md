@@ -52,9 +52,17 @@ The following example shows how to schedule a HelloDaily task (simple echo examp
 Version History
 ---------------
 
+0.1.2 (13/05/2015)
+
+*   Fixed missing output bug
+
+0.1.1 (06/02/2015)
+
+*   Fixed incorrect paths
+
 0.1.0 (06/02/2015)
 
-*   First public release of php-scheduler.
+*   First public release of php-scheduler
 
 
 Copyright
