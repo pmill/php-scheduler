@@ -7,7 +7,7 @@ class TaskList
 {
     protected $tasks = array();
     protected $output = array();
-    
+
     /**
     * Adds a new task to the list
     * @param TaskInterface $task
@@ -18,7 +18,7 @@ class TaskList
         $this->tasks[] = $task;
         return $this;
     }
-    
+
     /**
     * Runs any due task, returning an array containing the output from each task
     * @return array
@@ -28,7 +28,7 @@ class TaskList
         foreach ($this->tasks AS $task) {
             if ($task->isDue()) {
                 $result = $task->run();
-                $output[] = array(
+                $this->output[] = array(
                     'task'=>get_class($task),
                     'result'=>$result,
                     'output'=>$task->getOutput(),
