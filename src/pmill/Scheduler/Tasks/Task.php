@@ -21,10 +21,10 @@ abstract class Task implements TaskInterface
     abstract public function run();
     
     /**
-    * Sets a cron expression
-    * @param string $expression
-    * @return Task $this
-    */
+     * Sets a cron expression
+     * @param string $expression
+     * @return Task $this
+     */
     public function setExpression($expression)
     {
         $this->expression = $expression;
@@ -32,19 +32,19 @@ abstract class Task implements TaskInterface
     }
     
     /**
-    * Gets the current cron expression
-    * @return string
-    */
+     * Gets the current cron expression
+     * @return string
+     */
     public function getExpression()
     {
         return $this->expression;
     }
     
     /**
-    * Sets the output from the task
-    * @param null|string|array $output
-    * @return Task $this
-    */
+     * Sets the output from the task
+     * @param null|string|array $output
+     * @return Task $this
+     */
     public function setOutput($output)
     {
         $this->output = $output;
@@ -52,18 +52,18 @@ abstract class Task implements TaskInterface
     }
     
     /**
-    * Gets the output from the task
-    * @return null|string|array
-    */
+     * Gets the output from the task
+     * @return null|string|array
+     */
     public function getOutput()
     {
         return $this->output;
     }
     
     /**
-    * Checks whether the task is currently due
-    * @return bool
-    */
+     * Checks whether the task is currently due
+     * @return bool
+     */
     public function isDue()
     {
         $expression = $this->getExpression();

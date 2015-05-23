@@ -17,10 +17,10 @@ class TaskList
     protected $output = array();
 
     /**
-    * Adds a new task to the list
-    * @param Interfaces\Task $task
-    * @return TaskList $this
-    */
+     * Adds a new task to the list
+     * @param Interfaces\Task $task
+     * @return TaskList $this
+     */
     public function addTask(Interfaces\Task $task)
     {
         $this->tasks[] = $task;
@@ -52,9 +52,9 @@ class TaskList
     }
 
     /**
-    * Runs any due task, returning an array containing the output from each task
-    * @return array
-    */
+     * Runs any due task, returning an array containing the output from each task
+     * @return array
+     */
     public function run()
     {
         $this->output = array();
