@@ -22,5 +22,9 @@
         "php": ">=5.4.0",
         "nesbot/Carbon": "1.13.*",
         "mtdowling/cron-expression": "1.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "codeclimate/php-test-reporter": "dev-master"
     }
 }

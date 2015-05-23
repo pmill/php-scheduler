@@ -5,18 +5,50 @@ use \pmill\Scheduler\Interfaces\Task as TaskInterface;
 
 class TaskList
 {
+
+    /**
+     * @var array|Interfaces\Task[]
+     */
     protected $tasks = array();
+
+    /**
+     * @var array
+     */
     protected $output = array();
 
     /**
     * Adds a new task to the list
-    * @param TaskInterface $task
-    * @return this
+    * @param Interfaces\Task $task
+    * @return TaskList $this
     */
-    public function addTask(TaskInterface $task)
+    public function addTask(Interfaces\Task $task)
     {
         $this->tasks[] = $task;
         return $this;
+    }
+
+    /**
+     * @param array|Interfaces\Task[] $tasks
+     */
+    public function setTasks($tasks)
+    {
+        $this->tasks = $tasks;
+    }
+
+    /**
+     * @return array|Interfaces\Task[]
+     */
+    public function getTasks()
+    {
+        return $this->tasks;
+    }
+
+    /**
+     * @return array
+     */
+    public function getOutput()
+    {
+        return $this->output;
     }
 
     /**

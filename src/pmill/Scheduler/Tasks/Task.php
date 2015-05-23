@@ -5,15 +5,25 @@ use \pmill\Scheduler\Interfaces\Task as TaskInterface;
 
 abstract class Task implements TaskInterface
 {
-    protected $expression = null;
-    protected $output = null;
-    
+    /**
+     * @var string
+     */
+    protected $expression;
+
+    /**
+     * @var string
+     */
+    protected $output;
+
+    /**
+     * @return mixed
+     */
     abstract public function run();
     
     /**
     * Sets a cron expression
     * @param string $expression
-    * @return this
+    * @return Task $this
     */
     public function setExpression($expression)
     {
@@ -33,7 +43,7 @@ abstract class Task implements TaskInterface
     /**
     * Sets the output from the task
     * @param string $output
-    * @return this
+    * @return Task $this
     */
     public function setOutput($output)
     {
@@ -52,7 +62,7 @@ abstract class Task implements TaskInterface
     
     /**
     * Checks whether the task is currently due
-    * @return this
+    * @return Task $this
     */
     public function isDue()
     {

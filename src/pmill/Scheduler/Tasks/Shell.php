@@ -3,9 +3,19 @@ namespace pmill\Scheduler\Tasks;
 
 class Shell extends Task
 {
-    protected $command = null;
+    /**
+     * @var string
+     */
+    protected $command;
+
+    /**
+     * @var array
+     */
     protected $arguments = array();
-    
+
+    /**
+     * @return mixed
+     */
     public function run()
     {
         $output = null;
@@ -14,21 +24,41 @@ class Shell extends Task
         $this->setOutput($output);
         return $result;
     }
-        
-    public function setCommand($value)
+
+    /**
+     * @param string $value
+     * @return $this
+     */
+    public function setCommand($command)
     {
-        $this->command = $value;
+        $this->command = $command;
         return $this;
     }
-    
+
+    /**
+     * @return string
+     */
     public function getCommand()
     {
         return $this->command;
     }
-    
-    public function addArgument($value)
+
+    /**
+     * @param mixed $value
+     * @return $this
+     */
+    public function addArgument($argument)
     {
-        $this->arguments[] = $value;
+        $this->arguments[] = $argument;
         return $this;
     }
+
+    /**
+     * @return array
+     */
+    public function getArguments()
+    {
+        return $this->arguments;
+    }
+
 }
