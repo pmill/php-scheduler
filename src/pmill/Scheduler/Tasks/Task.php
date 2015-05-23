@@ -11,7 +11,7 @@ abstract class Task implements TaskInterface
     protected $expression;
 
     /**
-     * @var string
+     * @var null|string|array
      */
     protected $output;
 
@@ -42,7 +42,7 @@ abstract class Task implements TaskInterface
     
     /**
     * Sets the output from the task
-    * @param string $output
+    * @param null|string|array $output
     * @return Task $this
     */
     public function setOutput($output)
@@ -53,7 +53,7 @@ abstract class Task implements TaskInterface
     
     /**
     * Gets the output from the task
-    * @return string
+    * @return null|string|array
     */
     public function getOutput()
     {
@@ -62,7 +62,7 @@ abstract class Task implements TaskInterface
     
     /**
     * Checks whether the task is currently due
-    * @return Task $this
+    * @return bool
     */
     public function isDue()
     {

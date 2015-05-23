@@ -26,7 +26,7 @@ class Shell extends Task
     }
 
     /**
-     * @param string $value
+     * @param string $command
      * @return $this
      */
     public function setCommand($command)
@@ -44,7 +44,7 @@ class Shell extends Task
     }
 
     /**
-     * @param mixed $value
+     * @param mixed $argument
      * @return $this
      */
     public function addArgument($argument)
