@@ -10,5 +10,6 @@ install: composer install --dev
 before_script:
   - git config --global user.email "dev.pmill@gmail.com"
   - git config --global user.name "pmill"
+
 after_script:
   - php vendor/bin/test-reporter
