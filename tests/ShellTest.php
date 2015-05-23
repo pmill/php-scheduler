@@ -26,8 +26,7 @@ class ShellTest extends PHPUnit_Framework_TestCase
         $shellTask->setCommand("echo Hello World");
         $result = $shellTask->run();
 
-        $this->assertEquals('Hello World', $result);
-        $this->assertEquals('Hello World', $shellTask->getOutput());
+        $this->assertContains('Hello World', $shellTask->getOutput());
     }
 
 }

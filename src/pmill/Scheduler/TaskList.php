@@ -57,6 +57,8 @@ class TaskList
     */
     public function run()
     {
+        $this->output = array();
+
         foreach ($this->tasks AS $task) {
             if ($task->isDue()) {
                 $result = $task->run();

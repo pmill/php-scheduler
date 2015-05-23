@@ -26,11 +26,11 @@ class TaskTest extends PHPUnit_Framework_TestCase
         $stub->setExpression('* * * * *');
         $this->assertTrue($stub->isDue());
 
-        $stub->setExpression(date('m G').' * * *');
+        $stub->setExpression(date('i G').' * * *');
         $this->assertTrue($stub->isDue());
 
-        $stub->setExpression(date('m G', strtotime('-1 minute')).' * * *');
-        $this->assertTrue($stub->isDue());
+        $stub->setExpression(date('i G', strtotime('-1 minute')).' * * *');
+        $this->assertFalse($stub->isDue());
     }
 
 }
