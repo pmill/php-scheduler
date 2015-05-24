@@ -18,7 +18,7 @@ Installation
 
 ### Installing via Composer
 
-The recommended way to install php-auth is through
+The recommended way to install php-scheduler is through
 [Composer](http://getcomposer.org).
 
 ```bash
@@ -26,10 +26,10 @@ The recommended way to install php-auth is through
 curl -sS https://getcomposer.org/installer | php
 ```
 
-Next, run the Composer command to install the latest version of php-auth:
+Next, run the Composer command to install the latest version of php-scheduler:
 
 ```bash
-composer.phar require pmill/php-auth
+composer.phar require pmill/php-scheduler
 ```
 
 After installing, you need to require Composer's autoloader:
