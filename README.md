@@ -76,6 +76,10 @@ The following example shows how to schedule a HelloDaily task (simple echo examp
 Version History
 ---------------
 
+0.1.3 (24/05/2015)
+
+*   Added unit tests
+
 0.1.2 (13/05/2015)
 
 *   Fixed missing output bug
