@@ -76,6 +76,10 @@ The following example shows how to schedule a HelloDaily task (simple echo examp
 Version History
 ---------------
 
+0.1.4 (25/01/2018)
+
+*   Removed nesbot/carbon dependency
+
 0.1.3 (24/05/2015)
 
 *   Added unit tests
