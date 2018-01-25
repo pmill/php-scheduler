@@ -11,7 +11,7 @@ class Shell extends Task
     /**
      * @var array
      */
-    protected $arguments = array();
+    protected $arguments = [];
 
     /**
      * @return mixed

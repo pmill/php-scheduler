@@ -1,34 +1,35 @@
 <?php
+
 namespace pmill\Scheduler;
 
-use \pmill\Scheduler\Interfaces\Task as TaskInterface;
+use pmill\Scheduler\Interfaces\Task as TaskInterface;
 
 class TaskList
 {
+    /**
+     * @var TaskInterface[]
+     */
+    protected $tasks = [];
 
     /**
-     * @var array|Interfaces\Task[]
+     * @var string[]
      */
-    protected $tasks = array();
-
-    /**
-     * @var array
-     */
-    protected $output = array();
+    protected $output = [];
 
     /**
      * Adds a new task to the list
-     * @param Interfaces\Task $task
+     *
+     * @param TaskInterface $task
      * @return TaskList $this
      */
-    public function addTask(Interfaces\Task $task)
+    public function addTask(TaskInterface $task)
     {
         $this->tasks[] = $task;
         return $this;
     }
 
     /**
-     * @param array|Interfaces\Task[] $tasks
+     * @param TaskInterface[] $tasks
      */
     public function setTasks($tasks)
     {
@@ -36,7 +37,7 @@ class TaskList
     }
 
     /**
-     * @return array|Interfaces\Task[]
+     * @return TaskInterface[]
      */
     public function getTasks()
     {
@@ -53,20 +54,21 @@ class TaskList
 
     /**
      * Runs any due task, returning an array containing the output from each task
+     *
      * @return array
      */
     public function run()
     {
-        $this->output = array();
+        $this->output = [];
 
-        foreach ($this->tasks AS $task) {
+        foreach ($this->tasks as $task) {
             if ($task->isDue()) {
                 $result = $task->run();
-                $this->output[] = array(
-                    'task'=>get_class($task),
-                    'result'=>$result,
-                    'output'=>$task->getOutput(),
-                );
+                $this->output[] = [
+                    'task' => get_class($task),
+                    'result' => $result,
+                    'output' => $task->getOutput(),
+                ];
             }
         }
         return $this->output;

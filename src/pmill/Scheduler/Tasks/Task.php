@@ -1,7 +1,8 @@
 <?php
 namespace pmill\Scheduler\Tasks;
 
-use \pmill\Scheduler\Interfaces\Task as TaskInterface;
+use Cron\CronExpression;
+use pmill\Scheduler\Interfaces\Task as TaskInterface;
 
 abstract class Task implements TaskInterface
 {
@@ -71,7 +72,7 @@ abstract class Task implements TaskInterface
             return false;
         }
         
-        $cron = \Cron\CronExpression::factory($expression);
+        $cron = CronExpression::factory($expression);
         return $cron->isDue();
     }
     
