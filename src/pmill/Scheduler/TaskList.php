@@ -45,6 +45,16 @@ class TaskList
     }
 
     /**
+     * @return TaskInterface[]
+     */
+    public function getTasksDue()
+    {
+        return array_filter($this->tasks, function (TaskInterface $task) {
+            return $task->isDue();
+        });
+    }
+
+    /**
      * @return array
      */
     public function getOutput()
@@ -61,16 +71,15 @@ class TaskList
     {
         $this->output = [];
 
-        foreach ($this->tasks as $task) {
-            if ($task->isDue()) {
-                $result = $task->run();
-                $this->output[] = [
-                    'task' => get_class($task),
-                    'result' => $result,
-                    'output' => $task->getOutput(),
-                ];
-            }
+        foreach ($this->getTasksDue() as $task) {
+            $result = $task->run();
+            $this->output[] = [
+                'task' => get_class($task),
+                'result' => $result,
+                'output' => $task->getOutput(),
+            ];
         }
+
         return $this->output;
     }
 }
