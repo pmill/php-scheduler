@@ -76,6 +76,10 @@ The following example shows how to schedule a HelloDaily task (simple echo examp
 Version History
 ---------------
 
+0.1.5 (13/03/2019)
+
+* Resolve list of tasks due before running the tasks (thanks [jhoughtelin](https://github.com/jhoughtelin))
+
 0.1.4 (25/01/2018)
 
 *   Removed nesbot/carbon dependency
