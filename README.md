@@ -1,7 +1,7 @@
 php-scheduler
 ============
 
-[![Build Status](https://secure.travis-ci.org/pmill/php-scheduler.svg?branch=master)](http://travis-ci.org/pmill/php-scheduler) [![Code Climate](https://codeclimate.com/github/pmill/php-scheduler/badges/gpa.svg)](https://codeclimate.com/github/pmill/php-scheduler) [![Test Coverage](https://codeclimate.com/github/pmill/php-scheduler/badges/coverage.svg)](https://codeclimate.com/github/pmill/php-scheduler/coverage) [![Test Coverage](https://scrutinizer-ci.com/g/pmill/php-scheduler/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/pmill/php-scheduler/)
+[![Code Climate](https://codeclimate.com/github/pmill/php-scheduler/badges/gpa.svg)](https://codeclimate.com/github/pmill/php-scheduler) [![Test Coverage](https://scrutinizer-ci.com/g/pmill/php-scheduler/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/pmill/php-scheduler/) ![Downloads](https://poser.pugx.org/pmill/php-scheduler/downloads)
 
 Introduction
 ------------
